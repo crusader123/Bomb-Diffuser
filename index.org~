@@ -1,0 +1,50 @@
+#+TITLE: ITWS2-ASSIGNMENT 4(ROBO GAME DESIGN)
+*NAME-SHUBHAM SANGAL*
+
+*ROLL NO-201101008*
+
+*  STUDY 
+** _Class Decomposition_
+I have roughly made 5-6 classes in my code.I have made them since they are an efficient
+way of distributing our work synchronouslly.For each different task I have made different
+class.So this can help me even while debugging my code.
+These are the following classes I used:
+
+*introduction*-This class displays the name of my game:'ROBOCOP'.
+It has a method
+_an(self)_ which opens file named 'robocop' and read it line by line and add each line to the
+screen.
+
+
+*field*-This class just produces the blueprint of the  background field of my game.
+Along with it,it is adding robot,codes and bomb in the field.
+
+It has the following method
+_add(self)_ - this method adds codes and bomb o the random position.
+_addrob(self)_-this adds robot to my game field.
+
+
+*hello*-This class contains methods which helps in building of my patterns sequentially
+character by character.For example,I have print HELLO.... using this class and passing
+appropriate parameters.
+the methods included in this class:
+_screenx(self,x1,x2,x3,y1,y2)_-this methods adds character 'X' to the screen horizontally.
+_screeny(self,y1,y2,y3,x1,x2)_-this adds 'X' vertically.
+_show(self)_-this is just for holding screen.
+
+
+*name*-This class is displaying the window for entering he name.
+_end(self)_-ends the screen
+_show1(self)_-holds the screen.
+
+   
+
+*rob(field)*-This class inherits the class *field*.The basic purpose of this class 
+is to move the robot.
+
+the methods :
+_move(self,tmout)_-This is the most inportant method.This moves the robot.
+_barrier(self)_-this adds barrier for level2.
+
+*level2*-This displays the introduction window for level2.
+

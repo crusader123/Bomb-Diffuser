@@ -1,0 +1,101 @@
+#+TITLE: ITWS2-ASSIGNMENT 4(ROBO GAME DESIGN)
+*NAME-SHUBHAM SANGAL*
+
+*ROLL NO-201101008*
+
+*  STUDY
+** _Code Decomposition_
+   I have just divided my code in 2 files.One is main file- 201101008\_robot.py which will
+run my game.Another is a file named 'robocop' which I have used in my main file to
+print the name of my game. 
+** _Class Decomposition_
+I have roughly made 5-6 classes in my code.I have made them since they are an efficient
+way of distributing our work synchronously.For each different task I have made different
+class.So this can help me even while debugging my code.
+These are the following classes I used:
+
+*introduction*-This class displays the name of my game:'ROBOCOP'.
+It has a method
+_an(self)_ which opens file named 'robocop' and read it line by line and add each line to the
+screen.
+
+
+*field*-This class just produces the blueprint of the  background field of my game.
+Along with it,it is adding robot,codes and bomb in the field.
+
+It has the following method
+_add(self)_ - this method adds codes and bomb o the random position.
+_addrob(self)_-this adds robot to my game field.
+
+
+*hello*-This class contains methods which helps in building of my patterns sequentially
+character by character.For example,I have print HELLO.... using this class and passing
+appropriate parameters.
+the methods included in this class:
+_screenx(self,x1,x2,x3,y1,y2)_-this methods adds character 'X' to the screen horizontally.
+
+_screeny(self,y1,y2,y3,x1,x2)_-this adds 'X' vertically.
+
+_show(self)_-this is just for holding screen.
+
+
+*name*-This class is displaying the window for entering he name.
+_end(self)_-ends the screen
+
+_show1(self)_-holds the screen.
+
+   
+
+*rob(field)*-This class inherits the class *field*.The basic purpose of this class 
+is to move the robot.
+
+the methods :
+_move(self,tmout)_-This is the most inportant method.This moves the robot.
+
+
+_barrier(self)_-this method adds barrier for level2.
+
+*level2*-This displays the introduction window for level2.
+
+** _Advantages_
+
+I have tried to design my classes in such a way that all small operations are 
+performed separately.This has increased modularity in my programming.Suppose 
+there is a bug in certain part of the code or I want to change certain thing
+in my operation,instead of exploring the whole code,I just need to go to that
+class which is responsible for the operation and just make the necesary 
+amendments. *for example*,if I want to change certain thing in movements 
+of my robot , I will simply go to class 'rob' and then to its method 'move'.
+
+Yeah,I have tried to keep my code as open as possile so that it can be 
+used under different conditions also. *for example*, I have passed the size 
+of field as an argument to function.Changing different argument will certainly
+change the field size.
+
+** _miscellaneous_
+
+First of all,class introduction is instanted .Then name class is called on 
+and then object of class hello is created and as a result hello window appears.
+After that move method of rob class is called.the first level appears.
+If u pass the first level then control transfers to class _level2_ and window
+for level 2 apppears.then again the move method is called upon along with the
+additional method _barrier_ which sets my level2.If u are able to collect all
+the codes and then diffuse the bomb u appear to be winner.
+
+** _Extra features_
+
+--Well,my first page displays the name 'ROBOCOP',the name of my game.
+--There is a page for entry of the Player Name.
+--Then a greeting page come saying 'Hello'
+--During the game,I display the message bomb active when all the codes
+are not collected and when all the codes are collected the messages changes
+'Gud all the codes are collected.Now rush to bomb.'
+-- When 'p' is pressed in middle of game,the game stops and 'PAUS' is displayed.
+--there is a level2.
+** _Screenshots_
+
+#+CAPTION: BOMB ACTIVE
+[[file:./Screenshot1.png]]
+
+#+CAPTION:  AFTER ALL CODES ARE EATEN
+[[file:./Screenshot2.png]] 
